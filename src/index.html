@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/image/logo.jpg"
+      type="image/x-icon"
+    />
+    <title>CodeHub</title>
+  </head>
+  <body class="bg-[#031521] w-full">
+    <div
+      class="max-w-7xl w-5/6 mx-auto text-white flex flex-col my-10 text-lg"
+      style="font-family: vazir"
+    >
+      <p class="text-4xl text-center mb-10">
+        همه چیز درباره <span class="font-bold text-yellow-500">Queue</span
+        ><span class="text-xl"> (صف)</span>
+      </p>
+      <p class="my-4 text-justify">
+        در فرهنگ لغت، صف یا کیو به معنای "خط انتظار" است، مثل صفی که مردم برای
+        گرفتن نان در گرفتن نان در جلوی نانوایی تشکیل میدهند.
+      </p>
+      <p class="my-4">
+        صف یک ساختار داده انتزاعی است که ترتیبی FIFO (اولین ورودی، اولین خروجی)
+        یا در بعضی مراجع بصورت گفته میشود LILO (اولین ورودی، اولین خروجی) را
+        برای ذخیره و بازیابی داده ها ارائه می دهد.
+      </p>
+      <span class="my-4"
+        >داده ساختار صف حالت های مختلف زیادی داره که هر کدوم بسته به شرایط و
+        کاربرد استفاده میشن :
+      </span>
+      <ul class="flex flex-col list-disc gap-2">
+        <li class="font-bold">صف ساده (Simple Queue) :</li>
+        <p class="mr-2">
+          این نوع صف از ترتیب FIFO (اولین ورودی، اولین خروجی) ساده استفاده می
+          کند. عناصر به ترتیب ورود به صف اضافه و حذف می شوند.
+        </p>
+        <span class="mb-3 mr-2"
+          >این نوع صف برای کاربردهایی که نیاز به ترتیب خاصی ندارند مناسب
+          است.</span
+        >
+        <li class="font-bold">صف اولویت دار (Priority Queue):</li>
+        <p class="mr-2">
+          در این نوع صف، عناصر بر اساس اولویت مرتب می شوند. عنصری با بالاترین
+          اولویت اولین عنصری است که از صف حذف می شود.
+        </p>
+        <span class="mb-3 mr-2"
+          >این نوع صف برای کاربردهایی که نیاز به پردازش عناصر به ترتیب</span
+        >
+        <li class="font-bold">صف دایره ای (Circular Queue):</li>
+        <p class="mb-3 mr-2">
+          این نوع صف از فضای حافظه به طور کارآمدتر استفاده می کند. در این نوع
+          صف، از یک آرایه برای ذخیره عناصر استفاده می شود.
+        </p>
+        <li class="font-bold">صف دوطرفه (Double Ended Queue):</li>
+        <p class="mr-2">
+          این نوع صف از دو انتها می توان به آن اضافه و حذف کرد. این نوع صف برای
+          کاربردهایی که نیاز به دسترسی به عناصر از دو انتها
+        </p>
+      </ul>
+      <p class="mt-12 mb-2">
+        هر داده ساختاری یک سری عملیات ها و توابع برای اجرای کار به خصوصی دارند
+        که صف هم از این استثنا خارج نیست ,
+        <span class="font-bold">توابع مهم صف عبارتند از :</span>
+      </p>
+      <ul class="flex flex-col list-disc gap-2">
+        <li class="font-bold mt-4">Enqueue (اضافه کردن):</li>
+        <p class="mr-2">
+          اضافه کردن یک عنصر جدید به انتهای صف. این عملیات معمولاً در زمان ثابت
+          انجام می شود.
+        </p>
+        <li class="font-bold">Dequeue (حذف):</li>
+        <p class="mr-2">
+          حذف و بازیابی اولین عنصر از صف. این عملیات معمولاً در زمان ثابت انجام
+          می شود.
+        </p>
+        <li class="font-bold">Peek (مشاهده):</li>
+        <p class="mr-2">
+          مشاهده اولین عنصر صف بدون حذف آن. این عملیات معمولاً در زمان ثابت
+          انجام می شود.
+        </p>
+        <li class="font-bold">IsEmpty (بررسی خالی بودن):</li>
+        <p class="mr-2">
+          بررسی اینکه صف خالی است یا خیر. این عملیات معمولاً در زمان ثابت انجام
+          می شود.
+        </p>
+        <li class="font-bold">Size (اندازه):</li>
+        <p class="mr-2">
+          برای محاسبه سایز صف می توان از متغیری برای ذخیره تعداد عناصر استفاده
+          کرد.
+        </p>
+      </ul>
+      <p class="mt-10 mb-4">
+        در عکس زیر شما یک صف رو مشاهده می کنید که با یک آرایه حلقوی پیاده سازی
+        شده است.
+      </p>
+      <figure>
+        <img
+          class="w-3/4"
+          src="./assets/image/20240228_221349 1.png"
+          alt="Queue image"
+        />
+      </figure>
+      <p class="my-6">
+        در صف دو اشاره‌گر به نام‌های <b>front (یا head)</b> و
+        <b>rear (tail یا back)</b> وجود دارند که برای ردیابی عناصر صف استفاده
+        می‌شوند.
+      </p>
+      <p>
+        <span class="font-bold">Front :</span> به اولین عنصری که باید از صف حذف
+        شود اشاره می‌کند.
+      </p>
+      <p class="my-3">
+        <span class="font-bold">Rear : </span> به آخرین عنصر یا در برخی پیاده
+        سازی ها به عنصر بعد از آخرین عنصر که به صف اضافه شده است اشاره می‌کند.
+      </p>
+      <p class="mt-16 text-ce mb-10">
+        پیچیدگی زمانی داده ساختار صف رو مشاهده می کنید که از سرعت بالایی برای
+        اضافه کردن و حذف کردن برخورداره.
+      </p>
+      <figure class="flex w-full items-center justify-center">
+        <img class="" src="./assets/image/image 1.png" alt="time" />
+      </figure>
+      <p class="mt-20 mb-10">
+        همون طور که میدونید صف یک داده ساختار انتزاعی هستش و میتونیم اون رو به
+        روش های مختلفی پیاده سازی کنیم ,
+        <b>دو روش رایج برای پیاده صف عبارتند از :</b>
+      </p>
+      <li class="font-bold">آرایه (Array)</li>
+      <li class="font-bold">لیست پیوندی (Linked List)</li>
+      <p class="my-10">
+        انتخاب این که از کدام روش های بالا برای پیاده سازی صف استفاده کنیم تاثیر
+        بسزایی در کارایی و عملکرد مناسبی که ما در نظر داریم می شود :
+      </p>
+      <ul class="list-disc flex flex-col gap-2">
+        <li class="font-bold">تعداد عناصر صف: </li>
+        <p class="mr-2">
+          اگر تعداد عناصر صف مشخص باشد، می توان از آرایه استفاده کرد.
+        </p>
+        <li class="font-bold">سرعت دسترسی به عناصر:</li>
+        <p class="mr-2">
+          اگر نیاز به دسترسی سریع به عناصر صف دارید، می توان از آرایه استفاده
+          کرد.
+        </p>
+        <li class="font-bold">پویایی:</li>
+        <p class="mr-2">
+          اگر نیاز به اضافه کردن و حذف عناصر از صف به طور پویا دارید، می توان از
+          لیست پیوندی استفاده کرد.
+        </p>
+      </ul>
+      <p class="my-10">
+        داده ساختار صف کاربرد های زیادی در الگوریتم ها و حتی کارکرد مرورگر ها و
+        ادیتور ها داره.
+      </p>
+      <ul class="list-disc flex flex-col gap-2">
+        <li class="font-bold">صف انتظار:</li>
+        <p class="mr-2">
+          صف ها برای شبیه سازی صف های انتظار در دنیای واقعی مانند صف نانوایی، صف
+          بانک و صف بلیط استفاده می شوند. در این موارد، اولین نفری که وارد صف می
+          شود، اولین نفری است که خدمات را دریافت می کند.
+        </p>
+        <li class="font-bold">پردازش رویدادها:</li>
+        <p class="mr-2">
+          صف ها برای ذخیره و پردازش رویدادها به ترتیب زمانی استفاده می شوند. به
+          عنوان مثال، در یک سیستم عامل، صف ها برای ذخیره درخواست های ورودی و
+          پردازش آنها به ترتیب دریافت استفاده می شوند.
+        </p>
+        <li class="font-bold">ذخیره موقت داده ها:</li>
+        <p class="mr-2">
+          صف ها برای ذخیره موقت داده ها قبل از پردازش آنها استفاده می شوند. به
+          عنوان مثال، در یک برنامه پخش موسیقی، صف ها برای ذخیره آهنگ هایی که می
+          خواهند پخش شوند استفاده می شوند.
+        </p>
+        <li class="font-bold">الگوریتم ها:</li>
+        <p class="mr-2">
+          صف ها در الگوریتم های مختلفی مانند جستجوی عمق اول (DFS) و جستجوی عرض
+          اول (BFS) استفاده می شوند. در این الگوریتم ها، صف ها برای ذخیره گره
+          هایی که باید بررسی شوند استفاده می شوند.
+        </p>
+      </ul>
+      <p class="my-16 font-bold text-center text-2xl">امیدوارم که این آموزش برای شما مفید بوده باشه :)</p>
+      <div class="my-32 flex items-center justify-center flex-row-reverse gap-10">
+        <a target="_blank" href="https://t.me/codeeehub"><img class="hover:scale-95 transition duration-100 md:w-24 w-10" src="./assets/image/telegram-svgrepo-com.svg" alt="Telegram Icon"></a>
+        <a target="_blank" href="https://www.youtube.com/@CodeeeHub"><img class="hover:scale-95 transition duration-100 md:w-24 w-10" src="./assets//image/youtube-color-svgrepo-com.svg" alt="Youtube Icon"></a>
+        <a target="_blank" href="https://github.com/CodeeeHub"><img class="hover:scale-95 transition duration-100 md:w-24 w-10" src="./assets/image/github-svgrepo-com.svg" alt="GitHub Icon" ></a>
+        <img src="./assets/image/logo.jpg"  class="rounded-sm md:w-24 w-10 hover:scale-95 transition duration-100"/>
+       </div>
+    </div>
+  </body>
+</html>
